@@ -48,3 +48,18 @@ function esconder(){
         
     }
 }
+
+let selectHabitaciones = document.querySelector('select[name=habitacion]');
+
+selectHabitaciones.addEventListener('change',mostrarOpcion);
+
+function mostrarOpcion(){
+    let valor = selectHabitaciones.value;
+    esconder();
+    if(valor == 0){
+        return false;
+    }
+
+    document.querySelector('.habitacion--'+valor).classList.remove('esconder');
+}
+
