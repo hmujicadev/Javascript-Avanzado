@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Juego</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Juego en Javascript</h1>
+		<button type="button" class="btn btn-primary" id="nuevo">Nuevo Juego</button>
+		 <button type="button" class="btn btn-danger" id="rendirse">Rendirse</button>
+		 <button type="button" class="btn btn-success" id="volver">Volver a intentar</button>
+		<hr>
+		<h3>Ingrese 4 números del 1 al 9 (sin repetir):</h3>
+		<div class="row">
+			<div class="col-1">
+				<input type="number" min="0" max=9 class="form-control" id="n1">
+			</div>
+			<div class="col-1">
+				<input type="number" min="0" max=9 class="form-control" id="n2">
+			</div>
+			<div class="col-1">
+				<input type="number" min="0" max=9 class="form-control" id="n3">
+			</div>
+			<div class="col-1">
+				<input type="number" min="0" max=9 class="form-control" id="n4">
+			</div>
+			<div class="col-3"><button class="btn btn-info" id="aceptar">Aceptar</button></div>
+		</div>
+		<br>
+		<div class="alert alert-primary hide" role="alert" id="result">
+  			2 Cifras Buenas y dos Regulares
+		</div>
+		<div id="ingresados" class="hide">
+			<h5>Números Ingresados:</h5>
+	
+		</div>
+		<div class="alert alert-danger hide" role="alert" id="response">
+
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>

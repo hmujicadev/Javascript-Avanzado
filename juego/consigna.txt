@@ -1,0 +1,23 @@
+﻿
+Escribir un juego que:
+- genere un número de 4 cifras irrepetibles
+- Solicitar al usuario el ingreso de un número de 4 cifras que no se repitan (validando todas las instancias)
+- Imprimir cada número arriesgado, informando:
+	si una cifra está en el nro a adivinar, informe que "una cifra" es regular
+	si una cifra está en la misma posición del número a adivinar, dicha cifra es BUENA.
+	En cada oportunidad que se arriesga, además de validar el número, se deberá informar cúantas cifras regulares y cuántas buenas tiene, SIN INFORMAR QUÉ CIFRA ES.
+	
+El juego termina cuando se aciertan las 4 cifras en las 4 posiciones correspondientes, infromando además cuántas veces se arriesgó y mostrando el historial de Nros arriesgados.
+
+Consideraciones: 
+	- Preguntar al usuario si quiere jugar
+	- Si quiere intentarlo nuevamente
+	- En el caso de que se RINDA: informarle el número que tenía que adivinar.
+
+/*****************/
+/ QUE QUEDE LINDO /
+/*****************/
+
+(O sea HTML + CSS)
+
+yuyagu@gmail.com
