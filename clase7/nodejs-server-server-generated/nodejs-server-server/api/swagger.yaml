@@ -1,0 +1,92 @@
+---
+swagger: "2.0"
+info:
+  description: "This is a simple API"
+  version: "1.0.0"
+  title: "Simple Inventory API"
+  contact:
+    email: "you@your-company.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "virtserver.swaggerhub.com"
+basePath: "/"
+tags:
+- name: "admins"
+  description: "Secured Admin-only calls"
+- name: "usuario"
+  description: "Operations available to regular developers"
+schemes:
+- "https"
+- "http"
+paths:
+  /alumnos:
+    get:
+      tags:
+      - "usuario"
+      summary: "obtener alumnos"
+      description: "Obtener el listado de alumnos\n"
+      operationId: "obtenerAlumnos"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/AlumnoItem"
+        400:
+          description: "bad input parameter"
+      x-swagger-router-controller: "Usuario"
+    post:
+      tags:
+      - "admins"
+      summary: "agregar un nuevo aluimno"
+      description: "Agregar un nuevo alumno al listado"
+      operationId: "nuevoAlumno"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "AlumnoItem"
+        description: "Nuevo Alumno para agregar"
+        required: false
+        schema:
+          $ref: "#/definitions/AlumnoItem"
+      responses:
+        201:
+          description: "alumno creado"
+        400:
+          description: "invalid input, object invalid"
+        409:
+          description: "an existing item already exists"
+      x-swagger-router-controller: "Admins"
+definitions:
+  AlumnoItem:
+    type: "object"
+    required:
+    - "apellido"
+    - "curso"
+    - "nombre"
+    properties:
+      id:
+        type: "integer"
+        example: 12
+      nombre:
+        type: "string"
+        example: "Jose"
+      apellido:
+        type: "string"
+        example: "Perez"
+      curso:
+        type: "string"
+        example: "PHP"
+    example:
+      curso: "PHP"
+      apellido: "Perez"
+      id: 12
+      nombre: "Jose"
