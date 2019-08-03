@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"nombre": "El Origen",
+		"nro_paginas": 355,
+		"editorial": "Editorial1",
+		"ISBN": 485415153
+	},
+	{
+		"id": 2,
+		"nombre": "El Psiquiatra",
+		"nro_paginas": 420,
+		"editorial": "Editorial1",
+		"ISBN": 511231231
+	},
+	{
+		"id": 3,
+		"nombre": "Los Guardianes de la Historia",
+		"nro_paginas": 621,
+		"editorial": "Editorial1",
+		"ISBN": 87548981
+	}
+]

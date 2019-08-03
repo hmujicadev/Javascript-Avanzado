@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Email Checker</title>
+</head>
+<body>
+    
+    <div class="container">
+            <h1>Registro</h1>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Email">Email</label>
+                    <input type="text" name="email" id="email" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="alert alert-danger hide" role="alert">
+                        El email ya se encuentra registrado
+
+                    </div>
+                    <div class="spinner-border text-warning m-4 hide" role="status">
+                            <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="btn btn-primary" id='enviar'>Enviar</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
