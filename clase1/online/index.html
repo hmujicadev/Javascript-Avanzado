@@ -12,6 +12,16 @@
 <header>
     <h1>Mi Pagina Web</h1>
 </header>
+<main>
+    <nav>
+        <a href="http://google.com">Google!</a>
+        <a href="http://educacionit.com">EducacionIT</a>
+    </nav>
+</main>
+<article id="movil">
+    <p>Esta navegando en un dispositivo móvil!</p>
+    <ul id="estatico"></ul>
+</article>
 <div class="container-fluid">
     
     <div class="container">
@@ -34,11 +44,52 @@
             </article>
           </div>
         </div>
-     
-  
-
 </div>
   
-<script src="app.js"></script>
+<script>
+  // Ejercicio 1
+let ul = document.createElement("ul")
+let fragmento = document.createDocumentFragment()
+for (var i = 1; i < 11; i++) {
+    let li = document.createElement("li")
+    li.innerText = "item "+i;
+    fragmento.appendChild(li)
+}
+ul.appendChild(fragmento)
+var Newul=document.querySelector('#ul').appendChild(ul)
+
+// ------------------------------------------------------------------------
+// Ejercicio 2
+  if(window.outerWidth>500){
+    document.querySelector('#movil').style.display='none';
+  }
+  
+// Ejercicio 3
+let fragmento2=document.createDocumentFragment();
+for (let i = 0; i < 11; i++) {
+  let li2 = document.createElement('li');
+  li2.innerText="item"+ (i+10);
+  fragmento2.appendChild(li2)
+}
+document.querySelector('ul').appendChild(fragmento2);  
+
+// Ejercicio 4 
+let hreference = document.querySelectorAll('a');
+console.log(hreference)
+let hreferencefirst = hreference[0].href;
+hreference[0].href= hreference[1].href;
+hreference[1].href= hreferencefirst;
+
+// Ejercicio 5
+
+document.querySelector('header').style.backgroundColor = 'rgba(0,50,150,0.3)';
+document.querySelector('h1').style.Color='rgba(200,200,200,0.8)';
+
+
+
+</script>
+
+
+
 </body>
 </html>
